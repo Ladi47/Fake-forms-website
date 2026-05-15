@@ -1,0 +1,660 @@
+{
+  "register": [
+    {
+      "id": "REG_001",
+      "type": "form-labels",
+      "severity": "critical",
+      "issue": "First name input missing 'for' attribute on label element",
+      "impact": "Screen reader users cannot associate the label with the input field, making it unclear what data is expected",
+      "wcag": "1.3.1 Info and Relationships"
+    },
+    {
+      "id": "REG_002",
+      "type": "form-labels",
+      "severity": "critical",
+      "issue": "Email address input has no label element at all",
+      "impact": "Screen reader users have no way to know what the field is for; field purpose is completely hidden",
+      "wcag": "1.3.1 Info and Relationships"
+    },
+    {
+      "id": "REG_003",
+      "type": "form-labels",
+      "severity": "critical",
+      "issue": "Repeat password label missing 'for' attribute",
+      "impact": "Screen readers cannot properly associate label with input, causing confusion about field purpose",
+      "wcag": "1.3.1 Info and Relationships"
+    },
+    {
+      "id": "REG_004",
+      "type": "aria",
+      "severity": "critical",
+      "issue": "Company name field marked with aria-hidden='true' but remains focusable",
+      "impact": "Screen reader users cannot know about a field they can still tab to and interact with, creating cognitive dissonance",
+      "wcag": "4.1.2 Name, Role, Value"
+    },
+    {
+      "id": "REG_005",
+      "type": "form-labels",
+      "severity": "critical",
+      "issue": "Phone number field uses div with class='looks-like-label' instead of <label> element",
+      "impact": "Screen readers do not recognize this as a label; field has no programmatic association",
+      "wcag": "1.3.1 Info and Relationships"
+    },
+    {
+      "id": "REG_006",
+      "type": "form-labels",
+      "severity": "critical",
+      "issue": "Birth date field has no label element",
+      "impact": "Screen reader users cannot identify field purpose; additionally uses wrong input type",
+      "wcag": "1.3.1 Info and Relationships"
+    },
+    {
+      "id": "REG_007",
+      "type": "keyboard-navigation",
+      "severity": "critical",
+      "issue": "Country select has tabindex='-1' removing it from keyboard navigation entirely",
+      "impact": "Keyboard-only users cannot access this required field at all using Tab key",
+      "wcag": "2.1.1 Keyboard"
+    },
+    {
+      "id": "REG_008",
+      "type": "form-structure",
+      "severity": "serious",
+      "issue": "Role radio buttons not grouped in fieldset/legend elements",
+      "impact": "Screen reader users cannot perceive the relationship between related radio buttons and their grouping label",
+      "wcag": "1.3.1 Info and Relationships"
+    },
+    {
+      "id": "REG_009",
+      "type": "keyboard-navigation",
+      "severity": "serious",
+      "issue": "Chaotic tabindex values (4, 1, 6, 2, 3, 5, 7, 99, -1) create unpredictable tab order",
+      "impact": "Keyboard users experience illogical navigation flow, tabindex='99' jumps focus unexpectedly",
+      "wcag": "2.4.3 Focus Order"
+    },
+    {
+      "id": "REG_010",
+      "type": "contrast",
+      "severity": "serious",
+      "issue": "Hero note text color #cce9f7 on background #0070AD has insufficient contrast ratio",
+      "impact": "Users with low vision or color blindness cannot read the quick setup notice",
+      "wcag": "1.4.3 Contrast (Minimum)"
+    },
+    {
+      "id": "REG_011",
+      "type": "form-semantics",
+      "severity": "moderate",
+      "issue": "Birth date input type='text' instead of type='date'",
+      "impact": "Users cannot benefit from native date picker; manual entry is required for everyone",
+      "wcag": "1.3.1 Info and Relationships"
+    },
+    {
+      "id": "REG_012",
+      "type": "form-labels",
+      "severity": "serious",
+      "issue": "Delivery speed radio buttons have inconsistent tabindex values (-1 and 9)",
+      "impact": "Keyboard navigation is broken; one radio button is skipped entirely",
+      "wcag": "2.4.3 Focus Order"
+    },
+    {
+      "id": "REG_013",
+      "type": "link-text",
+      "severity": "serious",
+      "issue": "Link text 'Click here' in consent checkbox is non-descriptive",
+      "impact": "Screen reader users reviewing link list cannot understand link purpose; vague for all users",
+      "wcag": "2.4.4 Link Purpose (In Context)"
+    },
+    {
+      "id": "REG_014",
+      "type": "custom-controls",
+      "severity": "critical",
+      "issue": "Simulated custom checkbox is not keyboard focusable and has no ARIA role",
+      "impact": "Keyboard users cannot interact with control; screen readers do not recognize it as a checkbox",
+      "wcag": "2.1.1 Keyboard"
+    },
+    {
+      "id": "REG_015",
+      "type": "modal-focus",
+      "severity": "serious",
+      "issue": "Terms modal has no focus trap and modal close button has focus management issues",
+      "impact": "Keyboard users can tab out of modal; focus management is unpredictable",
+      "wcag": "2.4.3 Focus Order"
+    },
+    {
+      "id": "REG_016",
+      "type": "modal-keyboard",
+      "severity": "critical",
+      "issue": "Quick Tips modal lacks keyboard escape handler and focus management",
+      "impact": "Keyboard users cannot close modal using Escape key; focus may be lost",
+      "wcag": "2.1.1 Keyboard"
+    }
+  ],
+  "complaint": [
+    {
+      "id": "COMP_001",
+      "type": "language",
+      "severity": "serious",
+      "issue": "HTML lang attribute set to 'en' but entire page content is in Polish",
+      "impact": "Screen readers will pronounce Polish text with English accent, severely impacting comprehension",
+      "wcag": "3.1.1 Language of Page"
+    },
+    {
+      "id": "COMP_002",
+      "type": "zoom-accessibility",
+      "severity": "serious",
+      "issue": "Viewport meta includes user-scalable=no and maximum-scale=1.0",
+      "impact": "Users with low vision cannot zoom in to read text; violates ability to resize text",
+      "wcag": "1.4.4 Resize Text"
+    },
+    {
+      "id": "COMP_003",
+      "type": "page-title",
+      "severity": "moderate",
+      "issue": "Page title is generic 'Strona' (Page) without descriptive content",
+      "impact": "Screen reader users cannot identify page purpose from browser title",
+      "wcag": "2.4.2 Page Titled"
+    },
+    {
+      "id": "COMP_004",
+      "type": "semantic-structure",
+      "severity": "serious",
+      "issue": "No semantic landmarks: missing <main>, <form>, <nav>, <section> elements",
+      "impact": "Screen reader users cannot efficiently navigate page structure using landmark regions",
+      "wcag": "1.3.1 Info and Relationships"
+    },
+    {
+      "id": "COMP_005",
+      "type": "headings",
+      "severity": "serious",
+      "issue": "Large text styled as h1 using div with inline styles instead of semantic <h1> element",
+      "impact": "Screen readers do not recognize text as heading; page outline is broken",
+      "wcag": "1.3.1 Info and Relationships"
+    },
+    {
+      "id": "COMP_006",
+      "type": "headings",
+      "severity": "serious",
+      "issue": "Heading hierarchy broken: jumps directly to <h5> without h1-h4 sequence",
+      "impact": "Screen reader users cannot follow logical document outline; navigation is confusing",
+      "wcag": "1.3.1 Info and Relationships"
+    },
+    {
+      "id": "COMP_007",
+      "type": "form-labels",
+      "severity": "critical",
+      "issue": "Employee ID field has no associated label element; span serves as visual label only",
+      "impact": "Screen readers do not announce field purpose; semantically unrelated to input",
+      "wcag": "1.3.1 Info and Relationships"
+    },
+    {
+      "id": "COMP_008",
+      "type": "aria",
+      "severity": "critical",
+      "issue": "Employee ID input marked aria-hidden='true' while remaining keyboard focusable",
+      "impact": "Screen reader users are unaware of a field they can still tab to and fill",
+      "wcag": "4.1.2 Name, Role, Value"
+    },
+    {
+      "id": "COMP_009",
+      "type": "form-labels",
+      "severity": "critical",
+      "issue": "Problem description textarea has only placeholder attribute as label",
+      "impact": "Label disappears when user starts typing; screen reader has no persistent label",
+      "wcag": "3.3.2 Labels or Instructions"
+    },
+    {
+      "id": "COMP_010",
+      "type": "contrast",
+      "severity": "critical",
+      "issue": "Problem description textarea has text color #e0e0e0 on white background - 1.1:1 contrast ratio",
+      "impact": "Text is nearly invisible; low vision users and users in bright environments cannot read content",
+      "wcag": "1.4.3 Contrast (Minimum)"
+    },
+    {
+      "id": "COMP_011",
+      "type": "contrast",
+      "severity": "serious",
+      "issue": "Multiple text elements use low-contrast class with #d3d3d3 or similar on white",
+      "impact": "Users with low vision struggle to read instructions and field labels",
+      "wcag": "1.4.3 Contrast (Minimum)"
+    },
+    {
+      "id": "COMP_012",
+      "type": "form-structure",
+      "severity": "serious",
+      "issue": "Priority radio buttons not grouped in fieldset/legend elements",
+      "impact": "Screen reader users cannot perceive relationship between radios and grouping label",
+      "wcag": "1.3.1 Info and Relationships"
+    },
+    {
+      "id": "COMP_013",
+      "type": "form-validation",
+      "severity": "critical",
+      "issue": "Duplicate id attribute 'bad-radio' on two different elements",
+      "impact": "Invalid HTML; some assistive technologies may fail to parse correctly",
+      "wcag": "4.1.1 Parsing"
+    },
+    {
+      "id": "COMP_014",
+      "type": "custom-controls",
+      "severity": "critical",
+      "issue": "Submit button implemented as div with onclick, no role='button', no keyboard support",
+      "impact": "Keyboard-only users cannot submit form; screen readers do not recognize as button",
+      "wcag": "2.1.1 Keyboard"
+    },
+    {
+      "id": "COMP_015",
+      "type": "link-text",
+      "severity": "serious",
+      "issue": "Link text 'Tutaj' (Here) is non-descriptive and lacks context",
+      "impact": "Screen reader users reviewing link list cannot understand navigation purpose",
+      "wcag": "2.4.4 Link Purpose (In Context)"
+    },
+    {
+      "id": "COMP_016",
+      "type": "keyboard-trap",
+      "severity": "critical",
+      "issue": "Input id='trap' uses onkeydown preventDefault to trap Tab key, blocking keyboard escape",
+      "impact": "Keyboard users are completely trapped and cannot navigate away from the field",
+      "wcag": "2.1.2 No Keyboard Trap"
+    },
+    {
+      "id": "COMP_017",
+      "type": "keyboard-navigation",
+      "severity": "critical",
+      "issue": "Emergency escape button has tabindex='-1' and aria-hidden='true' but is visible and clickable",
+      "impact": "Keyboard users cannot access emergency escape; contradictory hidden/visible states",
+      "wcag": "2.1.1 Keyboard"
+    },
+    {
+      "id": "COMP_018",
+      "type": "image-alt-text",
+      "severity": "serious",
+      "issue": "Logo image has alt text 'plik_logo2.png' - a filename, not a meaningful description",
+      "impact": "Screen reader users hear filename instead of understanding it's the Capgemini logo",
+      "wcag": "1.1.1 Non-text Content"
+    },
+    {
+      "id": "COMP_019",
+      "type": "form-labels",
+      "severity": "critical",
+      "issue": "Missing label element entirely for the employee ID field",
+      "impact": "Screen readers have no way to announce field purpose or context",
+      "wcag": "1.3.1 Info and Relationships"
+    },
+    {
+      "id": "COMP_020",
+      "type": "keyboard-navigation",
+      "severity": "serious",
+      "issue": "Chaotic tabindex sequence (3, 1, 4, 2, 5, -1) creates unpredictable focus order",
+      "impact": "Keyboard users experience illogical navigation; negative tabindex removes element from flow",
+      "wcag": "2.4.3 Focus Order"
+    }
+  ],
+  "order": [
+    {
+      "id": "ORD_001",
+      "type": "language",
+      "severity": "serious",
+      "issue": "HTML lang attribute set to 'en' but some Polish content present (Zgłoś awarię)",
+      "impact": "Screen readers may pronounce mixed-language content inconsistently",
+      "wcag": "3.1.1 Language of Page"
+    },
+    {
+      "id": "ORD_002",
+      "type": "image-alt-text",
+      "severity": "moderate",
+      "issue": "Logo image has alt text 'picture' - a generic term, not descriptive",
+      "impact": "Screen reader users do not know this is the Capgemini corporate logo",
+      "wcag": "1.1.1 Non-text Content"
+    },
+    {
+      "id": "ORD_003",
+      "type": "custom-controls",
+      "severity": "critical",
+      "issue": "Custom dropdown with tabindex='-1' is not keyboard accessible",
+      "impact": "Keyboard-only users cannot select computer type; Tab key skips this required field",
+      "wcag": "2.1.1 Keyboard"
+    },
+    {
+      "id": "ORD_004",
+      "type": "form-labels",
+      "severity": "critical",
+      "issue": "Computer Type field uses fake-label div instead of <label> element",
+      "impact": "Screen readers do not recognize label; no semantic association with control",
+      "wcag": "1.3.1 Info and Relationships"
+    },
+    {
+      "id": "ORD_005",
+      "type": "form-labels",
+      "severity": "critical",
+      "issue": "Shipping Address input has no label element, only placeholder",
+      "impact": "Screen readers cannot announce field purpose; label disappears when user starts typing",
+      "wcag": "1.3.1 Info and Relationships"
+    },
+    {
+      "id": "ORD_006",
+      "type": "contrast",
+      "severity": "serious",
+      "issue": "Business Justification textarea has color #cbe1f1 on background #f0f6fa - very low contrast",
+      "impact": "Text is difficult to read; users with low vision cannot access content",
+      "wcag": "1.4.3 Contrast (Minimum)"
+    },
+    {
+      "id": "ORD_007",
+      "type": "form-labels",
+      "severity": "critical",
+      "issue": "Detailed explanation textarea has no label and tabindex='-1'",
+      "impact": "Keyboard users cannot access field; screen readers do not announce purpose",
+      "wcag": "2.1.1 Keyboard"
+    },
+    {
+      "id": "ORD_008",
+      "type": "form-labels",
+      "severity": "critical",
+      "issue": "Detailed explanation uses fake-label div instead of proper <label>",
+      "impact": "Screen readers do not connect label to textarea semantically",
+      "wcag": "1.3.1 Info and Relationships"
+    },
+    {
+      "id": "ORD_009",
+      "type": "form-validation",
+      "severity": "critical",
+      "issue": "Current Device Serial Number uses green border color alone to indicate valid state",
+      "impact": "Users with color blindness or low vision cannot perceive validation status",
+      "wcag": "1.4.1 Use of Color"
+    },
+    {
+      "id": "ORD_010",
+      "type": "form-labels",
+      "severity": "critical",
+      "issue": "Cost Center field uses fake-label div instead of <label>",
+      "impact": "Screen readers do not recognize label; no semantic association",
+      "wcag": "1.3.1 Info and Relationships"
+    },
+    {
+      "id": "ORD_011",
+      "type": "contrast",
+      "severity": "serious",
+      "issue": "Disabled Cost Center field has light gray text on light gray background - very low contrast",
+      "impact": "Even disabled state text is nearly invisible to users with low vision",
+      "wcag": "1.4.3 Contrast (Minimum)"
+    },
+    {
+      "id": "ORD_012",
+      "type": "form-labels",
+      "severity": "critical",
+      "issue": "Checkboxes not properly labeled - using span with onclick instead of <label> elements",
+      "impact": "Screen readers do not announce checkbox labels; click target is too small",
+      "wcag": "1.3.1 Info and Relationships"
+    },
+    {
+      "id": "ORD_013",
+      "type": "form-semantics",
+      "severity": "critical",
+      "issue": "Manager Approval checkbox label uses red color only to indicate requirement status",
+      "impact": "Users with color blindness cannot perceive that this field is required",
+      "wcag": "1.4.1 Use of Color"
+    },
+    {
+      "id": "ORD_014",
+      "type": "form-structure",
+      "severity": "serious",
+      "issue": "Urgency radio buttons not grouped in fieldset/legend elements",
+      "impact": "Screen reader users cannot perceive relationship between related options",
+      "wcag": "1.3.1 Info and Relationships"
+    },
+    {
+      "id": "ORD_015",
+      "type": "form-labels",
+      "severity": "serious",
+      "issue": "Urgency radio buttons use span with onclick instead of proper <label> elements",
+      "impact": "Screen readers do not properly announce labels; click targets are too small",
+      "wcag": "1.3.1 Info and Relationships"
+    },
+    {
+      "id": "ORD_016",
+      "type": "keyboard-navigation",
+      "severity": "critical",
+      "issue": "ASAP radio button has tabindex='-1' removing it from keyboard navigation",
+      "impact": "Keyboard users cannot select the ASAP urgency option using Tab key",
+      "wcag": "2.1.1 Keyboard"
+    },
+    {
+      "id": "ORD_017",
+      "type": "custom-controls",
+      "severity": "critical",
+      "issue": "Accessories selector uses div items with onclick, no keyboard support or ARIA",
+      "impact": "Keyboard-only users cannot select accessories; screen readers do not recognize as interactive",
+      "wcag": "2.1.1 Keyboard"
+    },
+    {
+      "id": "ORD_018",
+      "type": "custom-controls",
+      "severity": "critical",
+      "issue": "Form submit implemented as div.submit-div with onclick, not a button",
+      "impact": "Keyboard users cannot submit form; screen readers do not recognize as button",
+      "wcag": "2.1.1 Keyboard"
+    },
+    {
+      "id": "ORD_019",
+      "type": "modal-keyboard",
+      "severity": "critical",
+      "issue": "Quick Tips modal lacks keyboard escape handler and focus trap",
+      "impact": "Keyboard users cannot close modal using Escape; focus management is broken",
+      "wcag": "2.1.1 Keyboard"
+    },
+    {
+      "id": "ORD_020",
+      "type": "form-labels",
+      "severity": "critical",
+      "issue": "Textarea for detailed explanation has only placeholder text, no persistent label",
+      "impact": "Users cannot remember field purpose after starting to type; screen readers have no label",
+      "wcag": "3.3.2 Labels or Instructions"
+    }
+  ],
+  "summary": [
+    {
+      "id": "SUM_001",
+      "type": "image-alt-text",
+      "severity": "moderate",
+      "issue": "Logo image alt text 'logo' is generic; should specify it's Capgemini branding",
+      "impact": "Screen reader users do not get clear identification of corporate logo",
+      "wcag": "1.1.1 Non-text Content"
+    },
+    {
+      "id": "SUM_002",
+      "type": "contrast",
+      "severity": "serious",
+      "issue": "Navigation links have color #95b8d1 on white background - insufficient contrast",
+      "impact": "Users with low vision or color blindness struggle to read navigation",
+      "wcag": "1.4.3 Contrast (Minimum)"
+    },
+    {
+      "id": "SUM_003",
+      "type": "headings",
+      "severity": "serious",
+      "issue": "Order details section uses div with class='looks-like-heading' instead of semantic heading",
+      "impact": "Screen reader users cannot identify section hierarchy; page structure is obscured",
+      "wcag": "1.3.1 Info and Relationships"
+    },
+    {
+      "id": "SUM_004",
+      "type": "headings",
+      "severity": "serious",
+      "issue": "Next steps section uses non-semantic div with class='looks-like-heading'",
+      "impact": "Screen readers do not recognize section break; content appears as unstructured text",
+      "wcag": "1.3.1 Info and Relationships"
+    },
+    {
+      "id": "SUM_005",
+      "type": "table-semantics",
+      "severity": "critical",
+      "issue": "Delivery tracking section uses divs to fake table structure instead of <table> element",
+      "impact": "Screen reader users cannot navigate or understand table structure; no cell associations",
+      "wcag": "1.3.1 Info and Relationships"
+    },
+    {
+      "id": "SUM_006",
+      "type": "table-semantics",
+      "severity": "serious",
+      "issue": "Fake table has no header row semantics; column meanings are unclear",
+      "impact": "Screen reader users cannot understand what each column represents",
+      "wcag": "1.3.1 Info and Relationships"
+    },
+    {
+      "id": "SUM_007",
+      "type": "form-semantics",
+      "severity": "critical",
+      "issue": "Status column uses color alone (green for Dispatched, orange for Processing) for meaning",
+      "impact": "Users with color blindness cannot understand delivery status",
+      "wcag": "1.4.1 Use of Color"
+    },
+    {
+      "id": "SUM_008",
+      "type": "keyboard-navigation",
+      "severity": "critical",
+      "issue": "Show diagnostic data toggle uses only onclick with no keyboard support or aria-expanded",
+      "impact": "Keyboard-only users cannot expand/collapse section; no announcement of state change",
+      "wcag": "2.1.1 Keyboard"
+    },
+    {
+      "id": "SUM_009",
+      "type": "aria",
+      "severity": "serious",
+      "issue": "Diagnostic data toggle marked aria-hidden='true' despite being user-interactive",
+      "impact": "Screen reader users cannot access this interactive control",
+      "wcag": "4.1.2 Name, Role, Value"
+    },
+    {
+      "id": "SUM_010",
+      "type": "form-labels",
+      "severity": "critical",
+      "issue": "Leave feedback section inputs have no label elements, only placeholders",
+      "impact": "Screen readers do not announce field purpose; labels disappear when typing",
+      "wcag": "1.3.1 Info and Relationships"
+    },
+    {
+      "id": "SUM_011",
+      "type": "contrast",
+      "severity": "serious",
+      "issue": "Feedback form inputs have color #d6d2e0 on white background - low contrast",
+      "impact": "Text is difficult to read; users with low vision cannot access form",
+      "wcag": "1.4.3 Contrast (Minimum)"
+    },
+    {
+      "id": "SUM_012",
+      "type": "custom-controls",
+      "severity": "critical",
+      "issue": "Submit Feedback is a styled div, not a button; no keyboard support",
+      "impact": "Keyboard-only users cannot submit feedback; screen readers do not recognize as button",
+      "wcag": "2.1.1 Keyboard"
+    },
+    {
+      "id": "SUM_013",
+      "type": "focus-management",
+      "severity": "serious",
+      "issue": "Focusable hidden helper div with tabindex='0' serves no purpose and traps focus",
+      "impact": "Keyboard users can tab to an invisible element that does nothing",
+      "wcag": "2.4.3 Focus Order"
+    },
+    {
+      "id": "SUM_014",
+      "type": "modal-keyboard",
+      "severity": "critical",
+      "issue": "Quick Tips modal lacks keyboard escape handler and focus trap management",
+      "impact": "Keyboard users cannot close modal; focus may escape modal context",
+      "wcag": "2.1.1 Keyboard"
+    },
+    {
+      "id": "SUM_015",
+      "type": "headings",
+      "severity": "serious",
+      "issue": "Delivery tracking heading uses non-semantic div instead of <h2> or <h3>",
+      "impact": "Screen reader page structure is broken; users cannot navigate by headings",
+      "wcag": "1.3.1 Info and Relationships"
+    }
+  ],
+  "global": [
+    {
+      "id": "GLOBAL_001",
+      "type": "navigation",
+      "severity": "serious",
+      "issue": "No skip navigation link present on any page",
+      "impact": "Keyboard users must tab through all navigation links before reaching main content",
+      "wcag": "2.4.1 Bypass Blocks"
+    },
+    {
+      "id": "GLOBAL_002",
+      "type": "semantic-structure",
+      "severity": "serious",
+      "issue": "No <main> landmark on any page; primary content not marked with semantic element",
+      "impact": "Screen reader users cannot quickly jump to main content using landmark navigation",
+      "wcag": "1.3.1 Info and Relationships"
+    },
+    {
+      "id": "GLOBAL_003",
+      "type": "custom-controls",
+      "severity": "serious",
+      "issue": "Consistent pattern of using div/span with onclick instead of native button elements",
+      "impact": "Keyboard and screen reader accessibility is compromised across entire application",
+      "wcag": "2.1.1 Keyboard"
+    },
+    {
+      "id": "GLOBAL_004",
+      "type": "modal-focus",
+      "severity": "critical",
+      "issue": "Quick Tips modals appear on all pages without focus trap or proper keyboard handling",
+      "impact": "Keyboard users can tab outside modal context; Escape key does not close modal",
+      "wcag": "2.1.1 Keyboard"
+    },
+    {
+      "id": "GLOBAL_005",
+      "type": "form-validation",
+      "severity": "serious",
+      "issue": "No form validation error messages or aria-invalid announcements",
+      "impact": "Users do not receive feedback when form validation fails; errors are silent",
+      "wcag": "3.3.1 Error Identification"
+    },
+    {
+      "id": "GLOBAL_006",
+      "type": "language",
+      "severity": "moderate",
+      "issue": "Language attribute inconsistency: some pages 'en', some 'pl', some not specified properly",
+      "impact": "Screen readers may pronounce content in wrong language, hindering comprehension",
+      "wcag": "3.1.1 Language of Page"
+    },
+    {
+      "id": "GLOBAL_007",
+      "type": "form-semantics",
+      "severity": "serious",
+      "issue": "Widespread use of fake labels (styled divs/spans) instead of <label> elements",
+      "impact": "Form accessibility is fundamentally broken; screen readers do not announce labels",
+      "wcag": "1.3.1 Info and Relationships"
+    },
+    {
+      "id": "GLOBAL_008",
+      "type": "keyboard-navigation",
+      "severity": "serious",
+      "issue": "Inconsistent and illogical tabindex usage across pages with negative and high values",
+      "impact": "Tab order is unpredictable; keyboard navigation is confusing and error-prone",
+      "wcag": "2.4.3 Focus Order"
+    },
+    {
+      "id": "GLOBAL_009",
+      "type": "semantic-structure",
+      "severity": "moderate",
+      "issue": "Divs used to simulate headings, buttons, tables, and other semantic elements",
+      "impact": "Screen reader users lose access to semantic structure and navigational shortcuts",
+      "wcag": "1.3.1 Info and Relationships"
+    },
+    {
+      "id": "GLOBAL_010",
+      "type": "focus-management",
+      "severity": "serious",
+      "issue": "No visible focus indicator; focus styles appear to be removed or default browser styles hidden",
+      "impact": "Keyboard users cannot see where focus is on the page; navigation is blind",
+      "wcag": "2.4.7 Focus Visible"
+    }
+  ]
+}
