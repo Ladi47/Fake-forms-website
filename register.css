@@ -4,9 +4,9 @@
     --card: #ffffffd9;
     --muted: #95b8d1;
     --soft-text: #3c5e79; /* slightly too light for some backgrounds -> WCAG contrast */
-    --action-bg: #0070AD; /* Capgemini Blue */
+    --action-bg: #0070AD; /* Brand blue */
     --action-text: #304e63; /* Very bad contrast -> WCAG error */
-    --accent-a: #00A4E4; /* Capgemini Cyan */
+    --accent-a: #00A4E4; /* Brand cyan */
     --accent-b: #bfe5f9;
     --accent-c: #8ed0f4;
 }

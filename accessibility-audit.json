@@ -271,7 +271,7 @@
       "type": "image-alt-text",
       "severity": "serious",
       "issue": "Logo image has alt text 'plik_logo2.png' - a filename, not a meaningful description",
-      "impact": "Screen reader users hear filename instead of understanding it's the Capgemini logo",
+      "impact": "Screen reader users hear a filename instead of understanding the logo meaning",
       "wcag": "1.1.1 Non-text Content"
     },
     {
@@ -305,7 +305,7 @@
       "type": "image-alt-text",
       "severity": "moderate",
       "issue": "Logo image has alt text 'picture' - a generic term, not descriptive",
-      "impact": "Screen reader users do not know this is the Capgemini corporate logo",
+      "impact": "Screen reader users do not know this is the corporate logo",
       "wcag": "1.1.1 Non-text Content"
     },
     {
@@ -458,7 +458,7 @@
       "id": "SUM_001",
       "type": "image-alt-text",
       "severity": "moderate",
-      "issue": "Logo image alt text 'logo' is generic; should specify it's Capgemini branding",
+      "issue": "Logo image alt text 'logo' is generic; should specify the branding",
       "impact": "Screen reader users do not get clear identification of corporate logo",
       "wcag": "1.1.1 Non-text Content"
     },

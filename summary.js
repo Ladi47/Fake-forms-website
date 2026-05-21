@@ -5,12 +5,3 @@ function showInfo() {
         toast.style.display = 'none';
     }, 1200);
 }
-
-function toggleDetails() {
-    const details = document.getElementById('secretDetails');
-    if (details.style.display === 'none') {
-        details.style.display = 'block';
-    } else {
-        details.style.display = 'none';
-    }
-}
